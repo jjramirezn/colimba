@@ -1,0 +1,226 @@
+hello.c:6:22: warning: unknown escape sequence '\A' [-Wunknown-escape-sequence]
+        printf("hello\A, world\n");
+                     ^~
+hello.c:8:22: warning: unknown escape sequence '\B' [-Wunknown-escape-sequence]
+        printf("hello\B, world\n");
+                     ^~
+hello.c:9:22: warning: unknown escape sequence '\c' [-Wunknown-escape-sequence]
+        printf("hello\c, world\n");
+                     ^~
+hello.c:10:22: warning: unknown escape sequence '\C' [-Wunknown-escape-sequence]
+        printf("hello\C, world\n");
+                     ^~
+hello.c:11:22: warning: unknown escape sequence '\d' [-Wunknown-escape-sequence]
+        printf("hello\d, world\n");
+                     ^~
+hello.c:12:22: warning: unknown escape sequence '\D' [-Wunknown-escape-sequence]
+        printf("hello\D, world\n");
+                     ^~
+hello.c:13:22: warning: use of non-standard escape character '\e' [-Wpedantic]
+        printf("hello\e, world\n");
+                     ^~
+hello.c:14:22: warning: use of non-standard escape character '\E' [-Wpedantic]
+        printf("hello\E, world\n");
+                     ^~
+hello.c:16:22: warning: unknown escape sequence '\F' [-Wunknown-escape-sequence]
+        printf("hello\F, world\n");
+                     ^~
+hello.c:17:22: warning: unknown escape sequence '\g' [-Wunknown-escape-sequence]
+        printf("hello\g, world\n");
+                     ^~
+hello.c:18:22: warning: unknown escape sequence '\G' [-Wunknown-escape-sequence]
+        printf("hello\G, world\n");
+                     ^~
+hello.c:19:22: warning: unknown escape sequence '\h' [-Wunknown-escape-sequence]
+        printf("hello\h, world\n");
+                     ^~
+hello.c:20:22: warning: unknown escape sequence '\H' [-Wunknown-escape-sequence]
+        printf("hello\H, world\n");
+                     ^~
+hello.c:21:22: warning: unknown escape sequence '\i' [-Wunknown-escape-sequence]
+        printf("hello\i, world\n");
+                     ^~
+hello.c:22:22: warning: unknown escape sequence '\I' [-Wunknown-escape-sequence]
+        printf("hello\I, world\n");
+                     ^~
+hello.c:23:22: warning: unknown escape sequence '\j' [-Wunknown-escape-sequence]
+        printf("hello\j, world\n");
+                     ^~
+hello.c:24:22: warning: unknown escape sequence '\J' [-Wunknown-escape-sequence]
+        printf("hello\J, world\n");
+                     ^~
+hello.c:25:22: warning: unknown escape sequence '\k' [-Wunknown-escape-sequence]
+        printf("hello\k, world\n");
+                     ^~
+hello.c:26:22: warning: unknown escape sequence '\K' [-Wunknown-escape-sequence]
+        printf("hello\K, world\n");
+                     ^~
+hello.c:27:22: warning: unknown escape sequence '\l' [-Wunknown-escape-sequence]
+        printf("hello\l, world\n");
+                     ^~
+hello.c:28:22: warning: unknown escape sequence '\L' [-Wunknown-escape-sequence]
+        printf("hello\L, world\n");
+                     ^~
+hello.c:29:22: warning: unknown escape sequence '\m' [-Wunknown-escape-sequence]
+        printf("hello\m, world\n");
+                     ^~
+hello.c:30:22: warning: unknown escape sequence '\M' [-Wunknown-escape-sequence]
+        printf("hello\M, world\n");
+                     ^~
+hello.c:32:22: warning: unknown escape sequence '\N' [-Wunknown-escape-sequence]
+        printf("hello\N, world\n");
+                     ^~
+hello.c:33:22: warning: unknown escape sequence '\o' [-Wunknown-escape-sequence]
+        printf("hello\o, world\n");
+                     ^~
+hello.c:34:22: warning: unknown escape sequence '\p' [-Wunknown-escape-sequence]
+        printf("hello\p, world\n");
+                     ^~
+hello.c:35:22: warning: unknown escape sequence '\P' [-Wunknown-escape-sequence]
+        printf("hello\P, world\n");
+                     ^~
+hello.c:36:22: warning: unknown escape sequence '\q' [-Wunknown-escape-sequence]
+        printf("hello\q, world\n");
+                     ^~
+hello.c:37:22: warning: unknown escape sequence '\Q' [-Wunknown-escape-sequence]
+        printf("hello\Q, world\n");
+                     ^~
+hello.c:39:22: warning: unknown escape sequence '\R' [-Wunknown-escape-sequence]
+        printf("hello\R, world\n");
+                     ^~
+hello.c:40:22: warning: unknown escape sequence '\s' [-Wunknown-escape-sequence]
+        printf("hello\s, world\n");
+                     ^~
+hello.c:41:22: warning: unknown escape sequence '\S' [-Wunknown-escape-sequence]
+        printf("hello\S, world\n");
+                     ^~
+hello.c:43:22: warning: unknown escape sequence '\T' [-Wunknown-escape-sequence]
+        printf("hello\T, world\n");
+                     ^~
+hello.c:44:22: warning: universal character names are only valid in C99 or C++ [-Wunicode]
+        printf("hello\u2606, world\n");
+                     ^~~~~~
+hello.c:45:22: warning: universal character names are only valid in C99 or C++ [-Wunicode]
+        printf("hello\U00002606, world\n");
+                     ^~~~~~~~~~
+hello.c:47:22: warning: unknown escape sequence '\V' [-Wunknown-escape-sequence]
+        printf("hello\V, world\n");
+                     ^~
+hello.c:48:22: warning: unknown escape sequence '\w' [-Wunknown-escape-sequence]
+        printf("hello\w, world\n");
+                     ^~
+hello.c:49:22: warning: unknown escape sequence '\W' [-Wunknown-escape-sequence]
+        printf("hello\W, world\n");
+                     ^~
+hello.c:51:22: warning: unknown escape sequence '\X' [-Wunknown-escape-sequence]
+        printf("hello\X, world\n");
+                     ^~
+hello.c:52:22: warning: unknown escape sequence '\y' [-Wunknown-escape-sequence]
+        printf("hello\y, world\n");
+                     ^~
+hello.c:53:22: warning: unknown escape sequence '\Y' [-Wunknown-escape-sequence]
+        printf("hello\Y, world\n");
+                     ^~
+hello.c:54:22: warning: unknown escape sequence '\z' [-Wunknown-escape-sequence]
+        printf("hello\z, world\n");
+                     ^~
+hello.c:55:22: warning: unknown escape sequence '\Z' [-Wunknown-escape-sequence]
+        printf("hello\Z, world\n");
+                     ^~
+hello.c:56:22: warning: format string contains '\0' within the string body [-Wformat]
+        printf("hello\0, world\n");
+               ~~~~~~^~~~~~~~~~~~
+hello.c:64:22: warning: unknown escape sequence '\8' [-Wunknown-escape-sequence]
+        printf("hello\8, world\n");
+                     ^~
+hello.c:65:22: warning: unknown escape sequence '\9' [-Wunknown-escape-sequence]
+        printf("hello\9, world\n");
+                     ^~
+hello.c:66:22: warning: unknown escape sequence '\!' [-Wunknown-escape-sequence]
+        printf("hello\!, world\n");
+                     ^~
+hello.c:68:22: warning: unknown escape sequence '\#' [-Wunknown-escape-sequence]
+        printf("hello\#, world\n");
+                     ^~
+hello.c:69:22: warning: unknown escape sequence '\$' [-Wunknown-escape-sequence]
+        printf("hello\$, world\n");
+                     ^~
+hello.c:70:22: warning: use of non-standard escape character '\%' [-Wpedantic]
+        printf("hello\%, world\n");
+                     ^~
+hello.c:70:24: warning: invalid conversion specifier ',' [-Wformat-invalid-specifier]
+        printf("hello\%, world\n");
+                     ~~^
+hello.c:71:22: warning: unknown escape sequence '\&' [-Wunknown-escape-sequence]
+        printf("hello\&, world\n");
+                     ^~
+hello.c:73:22: warning: use of non-standard escape character '\(' [-Wpedantic]
+        printf("hello\(, world\n");
+                     ^~
+hello.c:74:22: warning: unknown escape sequence '\)' [-Wunknown-escape-sequence]
+        printf("hello\), world\n");
+                     ^~
+hello.c:75:22: warning: unknown escape sequence '\*' [-Wunknown-escape-sequence]
+        printf("hello\*, world\n");
+                     ^~
+hello.c:76:22: warning: unknown escape sequence '\+' [-Wunknown-escape-sequence]
+        printf("hello\+, world\n");
+                     ^~
+hello.c:77:22: warning: unknown escape sequence '\,' [-Wunknown-escape-sequence]
+        printf("hello\,, world\n");
+                     ^~
+hello.c:78:22: warning: unknown escape sequence '\-' [-Wunknown-escape-sequence]
+        printf("hello\-, world\n");
+                     ^~
+hello.c:79:22: warning: unknown escape sequence '\.' [-Wunknown-escape-sequence]
+        printf("hello\., world\n");
+                     ^~
+hello.c:80:22: warning: unknown escape sequence '\/' [-Wunknown-escape-sequence]
+        printf("hello\/, world\n");
+                     ^~
+hello.c:81:22: warning: unknown escape sequence '\:' [-Wunknown-escape-sequence]
+        printf("hello\:, world\n");
+                     ^~
+hello.c:82:22: warning: unknown escape sequence '\;' [-Wunknown-escape-sequence]
+        printf("hello\;, world\n");
+                     ^~
+hello.c:83:22: warning: unknown escape sequence '\<' [-Wunknown-escape-sequence]
+        printf("hello\<, world\n");
+                     ^~
+hello.c:84:22: warning: unknown escape sequence '\=' [-Wunknown-escape-sequence]
+        printf("hello\=, world\n");
+                     ^~
+hello.c:85:22: warning: unknown escape sequence '\>' [-Wunknown-escape-sequence]
+        printf("hello\>, world\n");
+                     ^~
+hello.c:87:22: warning: unknown escape sequence '\@' [-Wunknown-escape-sequence]
+        printf("hello\@, world\n");
+                     ^~
+hello.c:88:22: warning: use of non-standard escape character '\[' [-Wpedantic]
+        printf("hello\[, world\n");
+                     ^~
+hello.c:90:22: warning: unknown escape sequence '\]' [-Wunknown-escape-sequence]
+        printf("hello\], world\n");
+                     ^~
+hello.c:91:22: warning: unknown escape sequence '\^' [-Wunknown-escape-sequence]
+        printf("hello\^, world\n");
+                     ^~
+hello.c:92:22: warning: unknown escape sequence '\_' [-Wunknown-escape-sequence]
+        printf("hello\_, world\n");
+                     ^~
+hello.c:93:22: warning: unknown escape sequence '\`' [-Wunknown-escape-sequence]
+        printf("hello\`, world\n");
+                     ^~
+hello.c:94:22: warning: use of non-standard escape character '\{' [-Wpedantic]
+        printf("hello\{, world\n");
+                     ^~
+hello.c:95:22: warning: unknown escape sequence '\|' [-Wunknown-escape-sequence]
+        printf("hello\|, world\n");
+                     ^~
+hello.c:96:22: warning: unknown escape sequence '\}' [-Wunknown-escape-sequence]
+        printf("hello\}, world\n");
+                     ^~
+hello.c:97:22: warning: unknown escape sequence '\~' [-Wunknown-escape-sequence]
+        printf("hello\~, world\n");
+                     ^~
+75 warnings generated.
