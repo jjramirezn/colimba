@@ -9,7 +9,7 @@
 int main()
 {
         int c, nb ,state;
-        char bstr[MAXSTR];
+        char bstr[MAXSTR+1];
 
         nb = 0;
         state = NEWLINE;
@@ -21,11 +21,9 @@ int main()
                         bstr[0] = '\0';
                 } else if (c == ' ' || c == '\t') {
                         state = BLANK;
-                        if (nb < MAXSTR-1) {
-                                bstr[nb] = c;
-                                ++nb;
-                        } else if (nb == MAXSTR-1)
-                                ++nb;
+                        if (nb < MAXSTR) {
+                                bstr[nb++] = c;
+                        }
                 } else if (c != '\n') {
                         if (state == BLANK) {
                                 bstr[nb] = '\0';
