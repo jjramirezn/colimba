@@ -5,7 +5,7 @@
 #define MAXLINE 1000
 
 int htoi(char hex[]);
-long getline2(char line[], long maxline);
+unsigned long getline2(char line[], unsigned long maxline);
 
 /* Exercise 2-3. Write the function h t o i ( s ) , which converts a string of
  * hexa-decimal digits (including an optional Ox or Ox) into its equivalent
@@ -47,22 +47,24 @@ int htoi(char s[]){
 
 /* getline2: read a line into s, return length; if the length is greater than
  *      the limit truncate the line but still report the correct length*/
-long getline2(char s[], long lim)
+unsigned long getline2(char s[], unsigned long lim)
 {
         int c;
-        long i;
+        unsigned long i;
 
         for (i=0; i<lim-1 && (c=getchar()) != EOF && c!='\n'; ++i) {
                 s[i] = c;
         }
         if (c == '\n') {
-                s[i] = c;
-                ++i;
+                s[i++] = c;
                 s[i] = '\0';
-        } else if (c != EOF) {
+        } else if (c == EOF) {
                 s[i] = '\0';
-                while ((c=getchar()) != EOF && c !='\n')
+        } else {
+                s[i] = '\0';
+                while ((c=getchar()) != EOF && c !='\n') {
                         ++i;
+                }
         }
         return i;
 }

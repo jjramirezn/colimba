@@ -38,16 +38,19 @@ unsigned long getline2(char s[], unsigned long lim)
         int c;
         unsigned long i;
 
-        for (i=0; i<lim-1 && (c=getchar()) != EOF && c!='\n'; ++i)
+        for (i=0; i<lim-1 && (c=getchar()) != EOF && c!='\n'; ++i) {
                 s[i] = c;
+        }
         if (c == '\n') {
-                s[i] = c;
-                ++i;
+                s[i++] = c;
                 s[i] = '\0';
-        } else if (c != EOF) {
+        } else if (c == EOF) {
                 s[i] = '\0';
-                while ((c=getchar()) != EOF && c !='\n')
+        } else {
+                s[i] = '\0';
+                while ((c=getchar()) != EOF && c !='\n') {
                         ++i;
+                }
         }
         return i;
 }
