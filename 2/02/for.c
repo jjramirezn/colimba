@@ -33,8 +33,6 @@ long getline2(char s[], unsigned long lim)
         if (c == '\n') {
                 s[i++] = c;
                 s[i] = '\0';
-        } else if (c == EOF) {
-                s[i] = '\0';
         } else {
                 s[i] = '\0';
                 while ((c=getchar()) != EOF && c !='\n') {
