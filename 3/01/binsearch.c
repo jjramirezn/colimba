@@ -66,10 +66,9 @@ int binsearch_2(int x, int v[], int n)
 {
         int low, high, mid;
 
-        low = 0;
+        low = mid = 0;
         high = n - 1;
-        mid = -1;
-        while (mid != x && low <= high) {
+        while (low < high) {
                 mid = (low+high) / 2;
                 if (x < v[mid]) {
                         high = mid - 1;
@@ -77,5 +76,5 @@ int binsearch_2(int x, int v[], int n)
                         low = mid + 1;
                 }
         }
-        return mid;                              /* no match */
+        return v[mid] == x ? mid : -1;
 }
