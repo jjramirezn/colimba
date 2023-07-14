@@ -3,7 +3,7 @@
 
 #define MAX_STR 33
 
-void itoa(int n, char s[], int b);
+void itob(int n, char s[], int b);
 void reverse(char s[]);
 char obtain_char(int d, int b);
 
@@ -17,67 +17,67 @@ int main(void)
         char s[MAX_STR + 1];
         for (i = -50; i < 51; ++i) {
                 printf("%d is: ", i);
-                itoa(i, s, 2);
+                itob(i, s, 2);
                 printf("%s in binary, ", s);
-                itoa(i, s, 8);
+                itob(i, s, 8);
                 printf("%s in octal, ", s);
-                itoa(i, s, 16);
+                itob(i, s, 16);
                 printf("%s in hexadecimal, ", s);
-                itoa(i, s, 32);
+                itob(i, s, 32);
                 printf("%s in Base32, ", s);
-                itoa(i, s, 64);
+                itob(i, s, 64);
                 printf("%s in Base64, ", s);
-                itoa(i, s, 92);
+                itob(i, s, 92);
                 printf("%s in base 92.\n", s);
 
         }
         i = -2147483648;
         printf("%d is: ", i);
-        itoa(i, s, 2);
+        itob(i, s, 2);
         printf("%s in binary, ", s);
-        itoa(i, s, 8);
+        itob(i, s, 8);
         printf("%s in octal, ", s);
-        itoa(i, s, 16);
+        itob(i, s, 16);
         printf("%s in hexadecimal, ", s);
-        itoa(i, s, 32);
+        itob(i, s, 32);
         printf("%s in Base32, ", s);
-        itoa(i, s, 64);
+        itob(i, s, 64);
         printf("%s in Base64, ", s);
-        itoa(i, s, 92);
+        itob(i, s, 92);
         printf("%s in base 92.\n", s);
         i = 2147483647;
         printf("%d is: ", i);
-        itoa(i, s, 2);
+        itob(i, s, 2);
         printf("%s in binary, ", s);
-        itoa(i, s, 8);
+        itob(i, s, 8);
         printf("%s in octal, ", s);
-        itoa(i, s, 16);
+        itob(i, s, 16);
         printf("%s in hexadecimal, ", s);
-        itoa(i, s, 32);
+        itob(i, s, 32);
         printf("%s in Base32, ", s);
-        itoa(i, s, 64);
+        itob(i, s, 64);
         printf("%s in Base64, ", s);
-        itoa(i, s, 92);
+        itob(i, s, 92);
         printf("%s in base 92.\n", s);
         i = 1994;
         printf("%d is: ", i);
-        itoa(i, s, 2);
+        itob(i, s, 2);
         printf("%s in binary, ", s);
-        itoa(i, s, 8);
+        itob(i, s, 8);
         printf("%s in octal, ", s);
-        itoa(i, s, 16);
+        itob(i, s, 16);
         printf("%s in hexadecimal, ", s);
-        itoa(i, s, 32);
+        itob(i, s, 32);
         printf("%s in Base32, ", s);
-        itoa(i, s, 64);
+        itob(i, s, 64);
         printf("%s in Base64, ", s);
-        itoa(i, s, 92);
+        itob(i, s, 92);
         printf("%s in base 92.\n", s);
         return 0;
 }
 
-/* itoa: convert n to characters in s in base b; 1 < b < 93 */
-void itoa(int n, char s[], int b)
+/* itob: convert n to characters in s in base b; 1 < b < 93 */
+void itob(int n, char s[], int b)
 {
         int i, sign;
 
