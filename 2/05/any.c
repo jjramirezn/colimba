@@ -1,6 +1,10 @@
 #include<stdio.h>
 
-#define MAXLEN  1000
+#define MAXLEN          1000
+#define CHAR_SIZE       256
+#define WORD1           0
+#define WORD2           1
+#define SKIP            2
 
 int any(char s1[], char s2[]);
 
@@ -11,35 +15,58 @@ int any(char s1[], char s2[]);
  */
 int main(void) {
         char c;
-        char word1[MAXLEN], word2[MAXLEN];
-        int wordn, i;
+        char word1[MAXLEN+1], word2[MAXLEN+1];
+        int i, state;
 
-        wordn = 1;
+        state = WORD1;
         i = 0;
+        word1[0] = word2[0] = '\0';
+        printf("To test the any function please input two words and press enter\n");
         while((c = getchar()) != EOF) {
-                if (c == ' ') {
-                        if (wordn == 1) {
-                                wordn = 2;
+                if (WORD1 == state) {
+                        if (MAXLEN == i) {
+                                printf("Please try again with %d or fewer chars per word\n",
+                                        MAXLEN);
                                 word1[i] = '\0';
                                 i = 0;
-                        }
-                } else if (c == '\n') {
-                        word2[i] = '\0';
-                        wordn = 1;
-                        i = any(word1, word2);
-                        if (i > -1) {
-                                printf("The first location of a character of "
-                                        "'%s' on '%s' is at index: %d\n",
-                                        word2, word1, any(word1, word2));
+                                state = SKIP;
+                        } else if (' ' == c || '\t' == c) {
+                                state = WORD2;
+                                word1[i] = '\0';
+                                i = 0;
+                        } else if ('\n' == c) {
+                                printf("There are no characters on the second word\n");
+                                i = 0;
                         } else {
-                                printf("No character of '%s' match any of '%s'\n",
-                                        word2, word1);
+                                word1[i++] = c;
                         }
-                        i = 0;
-                } else if (wordn == 1) {
-                        word1[i++] = c;
-                } else if (wordn == 2) {
-                        word2[i++] = c;
+                } else if (WORD2 == state) {
+                        if (MAXLEN == i) {
+                                printf("Please try again with %d or fewer chars per word\n",
+                                        MAXLEN);
+                                word1[0] = word2[0] = '\0';
+                                i = 0;
+                                state = SKIP;
+                        } else if (' ' == c || '\t' == c || '\n' == c) {
+                                word2[i] = '\0';
+                                if (any(word1, word2) > -1) {
+                                        printf("The first location of a character of "
+                                                "'%s' on '%s' is at index: %d\n",
+                                                word2, word1, any(word1, word2));
+                                } else {
+                                        printf("No character of '%s' match any of '%s'\n",
+                                                word2, word1);
+                                }
+                                word1[0] = word2[0] = '\0';
+                                i = 0;
+                                state = WORD1;
+                        } else {
+                                word2[i++] = c;
+                        }
+                } else if (SKIP == state) {
+                        if ('\n' == c) {
+                                state = WORD1;
+                        }
                 }
         }
         return 0;
@@ -50,22 +77,19 @@ int main(void) {
  */
 int any(char s1[], char s2[])
 {
-        int i, j, min;
+        int i;
+        int appears[CHAR_SIZE];
 
-        min = -1;
+        for (i = 0; i < CHAR_SIZE; i++) {
+                appears[i] = 0;
+        }
         for (i = 0; s2[i] != '\0'; i++) {
-                for (j = 0; s1[j] != '\0'; j++) {
-                        if (s1[j] == s2[i]) {
-                                if (min == -1 || j < min) {
-                                        min = j;
-                                }
-                                break;
-                        }
-                }
-                if (min == 0) {
-                        break;
+                appears[(unsigned)s2[i]] = 1;
+        }
+        for (i = 0; s1[i] != '\0'; i++) {
+                if (appears[(unsigned)s1[i]]) {
+                        return i;
                 }
         }
-
-        return min;
+        return -1;
 }
