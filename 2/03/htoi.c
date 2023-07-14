@@ -29,18 +29,16 @@ int htoi(char s[]){
         int i, n, d;
         n = 0;
         for (i = 0; s[i] != '\0' && s[i] != '\n'; ++i) {
-                if (i == 0 && s[i] == '0') {
-                        ++i;
+                if (s[i] >= '0' && s[i] <= '9') {
+                        d = s[i] - '0';
+                } else if (s[i] >= 'a' && s[i] <= 'f') {
+                        d = s[i] - 'a' + AHEX;
+                } else if (s[i] >= 'A' && s[i] <= 'F') {
+                        d = s[i] - 'A' + AHEX;
                 } else {
-                        if (s[i] >= '0' && s[i] <= '9') {
-                                d = s[i] - '0';
-                        } else if (s[i] >= 'a' && s[i] <= 'f') {
-                                d = s[i] - 'a' + AHEX;
-                        } else if (s[i] >= 'A' && s[i] <= 'F') {
-                                d = s[i] - 'A' + AHEX;
-                        }
-                        n = BASE * n + d;
+                        continue;
                 }
+                n = BASE * n + d;
         }
         return n;
 }
