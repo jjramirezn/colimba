@@ -24,7 +24,8 @@ void itoa(int n, char s[])
         }
         i = 0;
         if (n < 0) {
-                s[i++] = -(n % 10) + '0';
+                /* at this point n == INT_MIN so unsigned n would be its positive */
+                s[i++] = ((unsigned) n) % 10 + '0';
                 n /= -10;
         }
         do {                            /* generate digits in reverse order */

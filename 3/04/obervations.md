@@ -22,4 +22,4 @@ and in the ascii table the char that is at position 40 is '(' so we do
 "s[0] = '('" then the evaluation we do in the while is "(-2147483648 / 10) > 0"
 that would be "-214748364 > 0" which is 0 (false) and we dont go over the body
 again, sign at this time is -2147483648 so the if is 1 (true) and we do "s[1] =
-'-' " this far s = ")-" then we reverse it and we get the output we found: "-("
+'-' " this far s = "(-" then we reverse it and we get the output we found: "-("
