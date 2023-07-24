@@ -62,23 +62,25 @@ void escape(char to[], char from[])
 void parse(char to[], char from[])
 {
         unsigned i, j;
+        i = j = 0;
 
-        for (i = j = 0; from[i] != '\0'; ++i,++j) {
+        while (from[i] != '\0') {
                 if ('\\' == from[i]) {
                         switch (from[++i]) {
                                 case 'n':
-                                        to[j] = '\n';
+                                        to[j++] = '\n';
+                                        ++i;
                                         break;
                                 case 't':
-                                        to[j] = '\t';
+                                        to[j++] = '\t';
+                                        ++i;
                                         break;
                                 default:
                                         to[j++] = '\\';
-                                        to[j] = from[i];
                                         break;
                         }
                 } else {
-                        to[j] = from[i];
+                        to[j++] = from[i++];
                 }
         }
         to[j] = '\0';
