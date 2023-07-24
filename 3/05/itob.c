@@ -86,7 +86,7 @@ void itob(int n, char s[], int b)
         }
         i = 0;
         if (n < 0) {
-                s[i++] = obtain_char(-(n % b), b);
+                s[i++] = obtain_char(((unsigned) n) % b, b);
                 n /= -b;
         }
         do {                                    /* generate digits in reverse order */
@@ -117,14 +117,13 @@ void reverse(char s[])
  * (ignoring '-') from 33 to 126 being '!' == 0 and '~' == 92
  */
 char obtain_char(int d, int b) {
+        static char hex[] = "0123456789abcdef";
         char c;
         switch (b) {
                 case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
                 case 10:
-                        c = d + '0';
-                        break;
                 case 16:
-                        c = d < 10 ? d + '0' : d - 10 + 'a';
+                        c = hex[d];
                         break;
                 case 32:
                         c = d < 26 ? d + 'A' : d - 26 + '2';
