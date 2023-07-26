@@ -10,7 +10,8 @@ unsigned long getline2(char s[], unsigned long lim);
 /* Exercise 4-13. Write a recursive version of the function reverse(s), which
  * reverses the string s in place.
  */
-int main(void) {
+int main(void)
+{
         unsigned long len;      /* current line length */
         char line[MAXLINE + 1];     /* current input line */
 

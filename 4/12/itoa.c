@@ -8,7 +8,8 @@ void itoa(int n, char **p);
 /* Exercise4-12. Adapt theideasofprintd towritearecursiveversionof itoa; that
  * is, convert an integer into a string by calling a recursive routine.
  */
-int main(void) {
+int main(void)
+{
         char s[MAX_STR+1] = "";
         char *ps = s;
         itoa(2147483647, &ps);
