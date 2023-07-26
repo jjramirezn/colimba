@@ -28,7 +28,6 @@ void reverse(char s[], unsigned left, unsigned right)
         }
         swap(s, left, right);
         reverse(s, ++left, --right);
-
 }
 
 void swap(char v[], unsigned i, unsigned j)
