@@ -1,0 +1,16 @@
+A practical note: if the tree becomes "unbalanced" because the words don't
+arrive in random order, the running time of the program can grow too much.
+As a worst case, if the words are already in order, this program does an
+expensive simulation of linear search. There are generalizations of the binary
+tree that do not suffer from this worst-case behavior, but we will not describe
+them here.
+
+Before we leave this example, it is also worth a brief digression on a problem
+related to storage allocators. Clearly i t ' s desirable that there be only one
+storage allocator in a program, even though it allocates different kinds of
+objects. But if one allocator is to process requests for,say,pointers to chars
+and pointers to struct tnodes, two questions arise. First, how does it meet the
+requirement of most real machines that objects of certain types must satisfy
+alignment restrictions ( f o r example, integers often must be located at even
+addresses)? Second, what declarations can cope with the fact that an allocator
+must necessarily return different kinds of pointers?
